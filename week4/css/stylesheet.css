@@ -77,15 +77,22 @@ img{
 .grid img:hover{
     width: 70%;
     border-radius: 50%;
+    
 }
 
 .grid p{
     padding: 5%;
     text-align:justify;
 }
-.tam img:hover{
+.tam img:hover:nth-child(odd){
     width: 70%;
     border-radius: 50%;
+    transform:skew(15deg, 5deg);
+}
+.tam img:hover:nth-child(even){
+    width: 70%;
+    border-radius: 50%;
+    transform:skew(-15deg, 5deg);
 }
 a{
     color: #1ac9a6
@@ -93,3 +100,26 @@ a{
 footer{
     background-color: #423a62;
 }
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: auto;
+    top: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    background-color: yellow; 
+    padding: 5px;
+  }
+  a:focus{
+    border: double;
+    border-color: white;
+  }
